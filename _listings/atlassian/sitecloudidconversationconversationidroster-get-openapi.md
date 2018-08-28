@@ -33,6 +33,24 @@ paths:
       tags:
       - Conversation
       - Roster
+    patch:
+      summary: Update a conversation roster
+      description: Authentication required, with scope manage:conversation
+      operationId: PatchRosterHandler
+      x-api-path-slug: sitecloudidconversationconversationidroster-patch
+      parameters:
+      - in: path
+        name: cloudId
+        description: The id of the site (cloudId)
+      - in: path
+        name: conversationId
+        description: The conversation id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Conversation
+      - Roster
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
